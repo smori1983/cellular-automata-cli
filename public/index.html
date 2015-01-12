@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="cellularAutomation">
+  <head>
+    <meta charset="utf-8">
+    <title>cellular-automata-cli</title>
+    <style type="text/css">
+      body{
+        font-family: 'Arial Narrow', Arial, sans-serif;
+      }
+      canvas{
+        width: 150px;
+        height: 150px;
+        outline: 1px solid black;
+      }
+      .rule{
+        width: 200px;
+        height: 200px;
+        margin: 5px;
+        float: left;
+        text-align: center;
+        outline: 1px solid black;
+      }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+  <body ng-controller="rulesListCtrl">
+  <h1>Cellular Automata</h1>
+    <p>“All life is an experiment. The more experiments you make, the better." - Ralph Waldo Emerson</p>
+    <p>This experiment is the complete set of 256 (rules 0-255) elementary cellular automata. Illustrated below for a starting condition consisting of a single black cell.</p>
+    <p>Each cellular automation below is rendered live in the browser into canvas at run time. <b>To initiate the live automation inside of the terminal, all you need to do is left click on any rule below. To stop the automation inside of the command line simply press the "esc" key</b></p>
+    <p>In order to view the animation inside of the terminal properly, please ensure that your console is at least 80 characters wide when starting the animation.</p>
+    <div class="rule" ng-repeat="rule in rules">
+      <div id="ruleContainer-{{rule.id}}">
+        <div class="rule-id">Rule {{rule.id}}</div>
+        <div class="rule-id">{{rule.bits}}</div>
+        <canvas id="rule-{{rule.id}}" rule="{{rule.bits}}"></canvas>
+      </div>
+    </div>
+  </body>
+</html>

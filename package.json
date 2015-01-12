@@ -1,0 +1,25 @@
+{
+  "name": "cellular-automata-cli",
+  "version": "1.0.0",
+  "description": "cellular autonima from the command line",
+  "private": true,
+  "engines": {
+    "node": "~0.10.x",
+    "npm": "2.x.x"
+  },
+  "scripts": {
+    "start": "npm run node app.js"
+  },
+  "dependencies": {
+    "socket.io": "^1.2.1",
+    "node-bitarray":"^0.0.2",
+    "express" : "^4.10.7",
+    "chalk": "^0.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:coleGillespie/cellular-automata-cli.git"
+  },
+  "author": "Cole Gilelspie <mcg42387@gmail.com> (http://colegillespie.com)",
+  "license": "Public Domain"
+}
