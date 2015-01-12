@@ -1,4 +1,4 @@
-var cellular = require('./cellular-automaton');
+var cellular = require('./cellular-automata');
 var BitArray = require('node-bitarray')
 var express = require('express');
 var app = express();
