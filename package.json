@@ -12,7 +12,7 @@
     "test": "npm run lint -s",
     "lint": "npm run lint-server && npm run lint-frontend",
     "lint-server": "eslint cellular-automata/ app.js",
-    "lint-frontend": "eslint -c public/controllers.js"
+    "lint-frontend": "eslint public/js/controllers.js"
   },
   "dependencies": {
     "socket.io": "^1.2.1",
