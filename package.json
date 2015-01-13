@@ -9,9 +9,9 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "npm run lint -s",
+    "test": "npm run lint -s && mocha",
     "lint": "npm run lint-server && npm run lint-frontend",
-    "lint-server": "eslint cellular-automata/ app.js",
+    "lint-server": "eslint lib/ app.js",
     "lint-frontend": "eslint public/js/controllers.js"
   },
   "dependencies": {
@@ -19,10 +19,16 @@
     "node-bitarray":"^0.0.2",
     "express" : "^4.10.7",
     "nodemon": "~1.2.1",
-    "chalk": "^0.5.1",
+    "chalk": "^0.5.1"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": ">= 0.0.1",
+    "supertest":"^0.15.0",
     "eslint": "^0.11.0"
   },
-  "repository": {
+  "repository": 
+  {
     "type": "git",
     "url": "git@github.com:coleGillespie/cellular-automata-cli.git"
   },
