@@ -1,6 +1,6 @@
 'use strict';
 
-var cellular = require('./cellular-automata');
+var lib = require('./lib');
 var BitArray = require('node-bitarray');
 var express = require('express');
 var app = express();
@@ -41,7 +41,7 @@ io.on('connection', function (socket) {
     console.log(data);
     clearInterval(interval);
 
-    var ca = new cellular.Automation(data.rule, 80);
+    var ca = new lib.Automation(data.rule, 80);
 
     interval = setInterval(function () {
       ca.render();
