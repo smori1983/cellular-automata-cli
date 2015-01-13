@@ -8,13 +8,19 @@
     "npm": "2.x.x"
   },
   "scripts": {
-    "start": "npm run node app.js"
+    "start": "node app.js",
+    "test": "npm run lint -s",
+    "lint": "npm run lint-server && npm run lint-frontend",
+    "lint-server": "eslint cellular-automata/ app.js",
+    "lint-frontend": "eslint -c public/controllers.js"
   },
   "dependencies": {
     "socket.io": "^1.2.1",
     "node-bitarray":"^0.0.2",
     "express" : "^4.10.7",
-    "chalk": "^0.5.1"
+    "nodemon": "~1.2.1",
+    "chalk": "^0.5.1",
+    "eslint": "^0.11.0"
   },
   "repository": {
     "type": "git",
