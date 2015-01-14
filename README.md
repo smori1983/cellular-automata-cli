@@ -1,5 +1,5 @@
 # cellular-automata-cli
-All 256 elementary cellular automata live in the command line
+All 256 elementary cellular automata live in the command line.
 
 ![eca](https://raw.githubusercontent.com/coleGillespie/cellular-automata-cli/master/public/preview.png)
 
