@@ -9,23 +9,14 @@ var CellularAutomaton = function(rule, w, h, ctx) {
   var matrix = [];
 
   var neighbors = function(a, b, c) {
-    if (a === 1 && b === 1 && c === 1) {
-      return rule[0];
-    } else if (a === 1 && b === 1 && c === 0) {
-      return rule[1];
-    } else if (a === 1 && b === 0 && c === 1) {
-      return rule[2];
-    } else if (a === 1 && b === 0 && c === 0) {
-      return rule[3];
-    } else if (a === 0 && b === 1 && c === 1) {
-      return rule[4];
-    } else if (a === 0 && b === 1 && c === 0) {
-      return rule[5];
-    } else if (a === 0 && b === 0 && c === 1) {
-      return rule[6];
-    } else if (a === 0 && b === 0 && c === 0) {
-      return rule[7];
-    }
+    if (a === 1 && b === 1 && c === 1) { return rule[0]; }
+    if (a === 1 && b === 1 && c === 0) { return rule[1]; }
+    if (a === 1 && b === 0 && c === 1) { return rule[2]; }
+    if (a === 1 && b === 0 && c === 0) { return rule[3]; }
+    if (a === 0 && b === 1 && c === 1) { return rule[4]; }
+    if (a === 0 && b === 1 && c === 0) { return rule[5]; }
+    if (a === 0 && b === 0 && c === 1) { return rule[6]; }
+    if (a === 0 && b === 0 && c === 0) { return rule[7]; }
     return 0;
   };
 
