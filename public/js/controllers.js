@@ -33,7 +33,8 @@ var CellularAutomaton = function(rule, w, h, ctx) {
   for (var i = 0; i < columns; i++) {
     matrix[i] = [];
     for (var j = 0; j < rows; j++) {
-      matrix[i][j] = 0;
+      // matrix[i][j] = 0;
+      matrix[i][j] = Math.random() > 0.5 ? 1 : 0;
     }
   }
 
