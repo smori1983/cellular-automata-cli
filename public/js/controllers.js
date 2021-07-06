@@ -106,6 +106,11 @@ var init = function() {
   // of a cellular automation for that byte array
   for (var i = 0; i < 256; i++) {
     var canvas = $('#rule-' + i);
+
+    if (canvas.length === 0) {
+      continue;
+    }
+
     // var rule = parseRule(canvas.attr('rule'));
     var rule = convertRule(parseRule(canvas.attr('rule')));
 
