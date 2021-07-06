@@ -20,6 +20,20 @@ var CellularAutomaton = function(rule, w, h, ctx) {
     return 0;
   };
 
+  // Just memo.
+  // Sort if statements as 'The Embodied Mind' order.
+  var neighbors_ = function(a, b, c) {
+    if (a === 0 && b === 1 && c === 0) { return rule[5]; } // 0101
+    if (a === 0 && b === 1 && c === 1) { return rule[4]; } // 1110
+    if (a === 1 && b === 1 && c === 0) { return rule[1]; } // 1110
+    if (a === 1 && b === 1 && c === 1) { return rule[0]; } // 1001
+    if (a === 0 && b === 0 && c === 0) { return rule[7]; } // 1010
+    if (a === 0 && b === 0 && c === 1) { return rule[6]; } // 0100
+    if (a === 1 && b === 0 && c === 0) { return rule[3]; } // 0100
+    if (a === 1 && b === 0 && c === 1) { return rule[2]; } // 0000
+    return 0;
+  };
+
   //create a matrix for current columns
   for (var i = 0; i < columns; i++) {
     matrix[i] = [];
