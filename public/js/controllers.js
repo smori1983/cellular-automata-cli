@@ -80,12 +80,34 @@ var parseRule = function(rule){
   });
 };
 
+/**
+ * Accept rule as 'The Embodied Mind' format (in app.js), then convert to original.
+ *
+ * @param {number[]} original
+ * @return {number[]}
+ */
+var convertRule = function(original) {
+  var result = [];
+
+  result[5] = original[0];
+  result[4] = original[1];
+  result[1] = original[2];
+  result[0] = original[3];
+  result[7] = original[4];
+  result[6] = original[5];
+  result[3] = original[6];
+  result[2] = original[7];
+
+  return result;
+};
+
 var init = function() {
   // loop over 0-255 and paint a canvas
   // of a cellular automation for that byte array
   for (var i = 0; i < 256; i++) {
     var canvas = $('#rule-' + i);
-    var rule = parseRule(canvas.attr('rule'));
+    // var rule = parseRule(canvas.attr('rule'));
+    var rule = convertRule(parseRule(canvas.attr('rule')));
 
     sendAnimation('#ruleContainer-' + i, rule);
 
