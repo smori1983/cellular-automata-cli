@@ -17,14 +17,22 @@ server.listen(3000, function(){
 
 app.get('/rules', function (req, res) {
   //(rules 0-255)
-  var rules = [];
-  for (var i = 0; i < 256; i++) {
-    var rule = {
-      bits: BitArray.parse(i, true).join(''),
-      id: i
-    };
-    rules.push(rule);
-  }
+  // var rules = [];
+  // for (var i = 0; i < 256; i++) {
+  //   var rule = {
+  //     bits: BitArray.parse(i, true).join(''),
+  //     id: i
+  //   };
+  //   rules.push(rule);
+  // }
+
+  // 'The Embodied Mind' format inputs.
+  var rules = [
+    {bits:'01111000', id:0},
+    {bits:'11100110', id:1},
+    {bits:'01101000', id:2},
+    {bits:'10010000', id:3},
+  ];
 
   res.setHeader('Content-Type', 'application/json');
   res.status(200).send(rules);
