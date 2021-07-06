@@ -28,10 +28,12 @@
   </head>
   <body ng-controller="rulesListCtrl">
   <h1>Cellular Automata</h1>
+    <!--
     <p>“All life is an experiment. The more experiments you make, the better." - Ralph Waldo Emerson</p>
     <p>This experiment is the complete set of 256 (rules 0-255) elementary cellular automata. Illustrated below for a starting condition consisting of a single black cell.</p>
     <p>Each cellular automation below is rendered in the browser onto canvas at run time. <b>To initiate the live automation inside of the terminal, all you need to do is left click on any rule below. To stop the automation inside of the command line simply press the "esc" key</b></p>
     <p>In order to view the animation inside of the terminal properly, please ensure that your console is at least 80 characters wide when starting the animation.</p>
+    -->
     <div class="rule" ng-repeat="rule in rules">
       <div id="ruleContainer-{{rule.id}}">
         <div class="rule-id">Rule {{rule.id}}</div>
